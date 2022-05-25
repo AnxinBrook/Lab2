@@ -18,10 +18,11 @@ public class Exercise1Servlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String val="since loading ,this servlet has been accessed "+index+" times";
+        String val="since loading ,this servlet has been accessed "+index+" times"+
+                "ZhouZhenfeng 2020211001001213";
         ++index;
         request.setAttribute("val",val);
-        request.getRequestDispatcher("Lib1/exercise1.jsp").forward(request,response);
+        request.getRequestDispatcher("/exercise1.jsp").forward(request,response);
     }
 
     @Override
